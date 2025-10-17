@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Clients - Church Connect Kenya</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { brand: { 50: '#e6f4f5', 100: '#cce9eb', 500: '#0F828C', 600: '#0c6870', 700: '#094e54' } },
+                    fontFamily: { sans: ['Raleway', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        * { font-family: 'Raleway', sans-serif; }
+        .gradient-text { background: linear-gradient(135deg, #0F828C 0%, #1a9fac 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    </style>
+</head>
+<body class="bg-white">
+    
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-lg z-50 border-b border-gray-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-gradient-to-br from-brand-500 to-brand-600 rounded-xl flex items-center justify-center">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                        </svg>
+                    </div>
+                    <span class="text-xl sm:text-2xl font-bold gradient-text">Church Connect</span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-brand-500 transition font-medium">Home</a>
+                    <a href="about.html" class="text-gray-600 hover:text-brand-500 transition font-medium">About</a>
+                    <a href="features.html" class="text-gray-600 hover:text-brand-500 transition font-medium">Features</a>
+                    <a href="pricing.html" class="text-gray-600 hover:text-brand-500 transition font-medium">Pricing</a>
+                    <a href="clients.html" class="text-brand-600 font-semibold">Our Clients</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-brand-500 transition font-medium">Contact</a>
+                    <a href="https://app.churchconnect.co.ke" target="_blank" class="px-6 py-2.5 bg-gradient-to-r from-brand-500 to-brand-600 text-white rounded-full hover:shadow-xl transition font-semibold">Demo</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition">
+                    <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-gray-200 bg-white">
+            <div class="px-4 py-4 space-y-3">
+                <a href="index.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-lg transition">Home</a>
+                <a href="about.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-lg transition">About</a>
+                <a href="features.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-lg transition">Features</a>
+                <a href="pricing.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-lg transition">Pricing</a>
+                <a href="clients.html" class="block px-4 py-2 text-brand-600 font-semibold rounded-lg bg-brand-50">Our Clients</a>
+                <a href="contact.html" class="block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-lg transition">Contact</a>
+                <a href="https://app.churchconnect.co.ke" target="_blank" class="block px-4 py-3 bg-gradient-to-r from-brand-500 to-brand-600 text-white text-center rounded-lg font-semibold">Demo</a>
+            </div>
+        </div>
+    </nav>
+    
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileMenuButton.contains(e.target) && !mobileMenu.contains(e.target)) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+    </script>
+
+    <!-- Hero -->
+    <section class="pt-32 pb-12 px-4 bg-gradient-to-br from-brand-50 to-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Trusted by <span class="gradient-text">500+ Churches</span></h1>
+            <p class="text-lg text-gray-600">See what our clients say about us</p>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 px-4">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <!-- Testimonial 1 -->
+            <div class="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-lg transition">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 bg-brand-500 rounded-full flex items-center justify-center text-white font-bold text-lg">JM</div>
+                    <div class="ml-3">
+                        <div class="font-bold">Pastor John Mwangi</div>
+                        <div class="text-sm text-gray-500">Grace Community Church</div>
+                    </div>
+                </div>
+                <p class="text-sm text-gray-600 italic">"Church Connect transformed how we manage our church. Member engagement increased by 40% in just 3 months!"</p>
+                <div class="flex text-yellow-400 mt-4 text-sm">★★★★★</div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-lg transition">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 bg-brand-500 rounded-full flex items-center justify-center text-white font-bold text-lg">SM</div>
+                    <div class="ml-3">
+                        <div class="font-bold">Rev. Sarah Mutua</div>
+                        <div class="text-sm text-gray-500">Faith Chapel</div>
+                    </div>
+                </div>
+                <p class="text-sm text-gray-600 italic">"The digital giving feature has been a game-changer. Our online donations tripled within the first month!"</p>
+                <div class="flex text-yellow-400 mt-4 text-sm">★★★★★</div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-lg transition">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 bg-brand-500 rounded-full flex items-center justify-center text-white font-bold text-lg">DK</div>
+                    <div class="ml-3">
+                        <div class="font-bold">Bishop David Kimani</div>
+                        <div class="text-sm text-gray-500">Victory Church</div>
+                    </div>
+                </div>
+                <p class="text-sm text-gray-600 italic">"Excellent platform with outstanding support. The team is always ready to help and the system is very intuitive."</p>
+                <div class="flex text-yellow-400 mt-4 text-sm">★★★★★</div>
+            </div>
+
+            <!-- Testimonial 4 -->
+            <div class="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-lg transition">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 bg-brand-500 rounded-full flex items-center justify-center text-white font-bold text-lg">MO</div>
+                    <div class="ml-3">
+                        <div class="font-bold">Pastor Mary Omondi</div>
+                        <div class="text-sm text-gray-500">Hope Church</div>
+                    </div>
+                </div>
+                <p class="text-sm text-gray-600 italic">"The reporting features give us clear insights into our church growth. Highly recommended for any modern church!"</p>
+                <div class="flex text-yellow-400 mt-4 text-sm">★★★★★</div>
+            </div>
+
+            <!-- Testimonial 5 -->
+            <div class="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-lg transition">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 bg-brand-500 rounded-full flex items-center justify-center text-white font-bold text-lg">PW</div>
+                    <div class="ml-3">
+                        <div class="font-bold">Rev. Peter Wanjiru</div>
+                        <div class="text-sm text-gray-500">New Life Church</div>
+                    </div>
+                </div>
+                <p class="text-sm text-gray-600 italic">"Event management has never been easier. We can now track RSVPs and send reminders automatically. Amazing!"</p>
+                <div class="flex text-yellow-400 mt-4 text-sm">★★★★★</div>
+            </div>
+
+            <!-- Testimonial 6 -->
+            <div class="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-lg transition">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 bg-brand-500 rounded-full flex items-center justify-center text-white font-bold text-lg">EN</div>
+                    <div class="ml-3">
+                        <div class="font-bold">Pastor Elizabeth Njeri</div>
+                        <div class="text-sm text-gray-500">Bethel Church</div>
+                    </div>
+                </div>
+                <p class="text-sm text-gray-600 italic">"The communication tools help us stay connected with our members. SMS and email features work perfectly!"</p>
+                <div class="flex text-yellow-400 mt-4 text-sm">★★★★★</div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="py-16 px-4 bg-gray-50">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-12">By the Numbers</h2>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="text-4xl font-bold gradient-text mb-2">500+</div>
+                    <div class="text-sm text-gray-600">Active Churches</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold gradient-text mb-2">50K+</div>
+                    <div class="text-sm text-gray-600">Members Managed</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold gradient-text mb-2">99.9%</div>
+                    <div class="text-sm text-gray-600">Uptime</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold gradient-text mb-2">24/7</div>
+                    <div class="text-sm text-gray-600">Support</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 px-4 bg-gradient-to-br from-brand-500 to-brand-600">
+        <div class="max-w-4xl mx-auto text-center text-white">
+            <h2 class="text-3xl font-bold mb-4">Join Our Growing Community</h2>
+            <p class="text-lg mb-6 opacity-90">Start your free trial today</p>
+            <a href="/register" class="inline-block px-8 py-3 bg-white text-brand-600 rounded-lg hover:shadow-2xl transition font-semibold">
+                Get Started
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-brand-500 to-brand-600 rounded-xl"></div>
+                        <span class="text-xl font-bold text-white">Church Connect</span>
+                    </div>
+                    <p class="text-sm">Modern church management for the digital age.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-4">Product</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="features.html" class="hover:text-brand-500 transition">Features</a></li>
+                        <li><a href="pricing.html" class="hover:text-brand-500 transition">Pricing</a></li>
+                        <li><a href="/login" class="hover:text-brand-500 transition">Login</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-4">Company</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="about.html" class="hover:text-brand-500 transition">About Us</a></li>
+                        <li><a href="clients.html" class="hover:text-brand-500 transition">Our Clients</a></li>
+                        <li><a href="contact.html" class="hover:text-brand-500 transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-4">Connect</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li>Email: info@churchconnect.co.ke</li>
+                        <li>Phone: +254 724 588 948</li>
+                        <li>Nairobi, Kenya</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-sm">
+                <p>&copy; 2025 Church Connect Kenya. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
